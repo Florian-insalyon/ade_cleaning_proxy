@@ -9,7 +9,7 @@ events = re.findall(r"BEGIN:VEVENT.*?END:VEVENT", ics, re.DOTALL)
 cleaned_events = []
 
 for ev in events:
-    if "LV1" in ev or "LV2" in ev:
+    if ("LV1" in ev) or ("LV2" in ev) or ("Créneau OPT" in ev) or ("Créneau PCO" in ev):
         continue
 
     # Extract short code and type (TD, TP, CM, etc.)
